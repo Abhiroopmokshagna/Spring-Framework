@@ -9,7 +9,6 @@ public class BinarySearchImpl {
 	}
 
 	public Integer binarySearch(int[] numbers, int numberToSearchFor) {
-		//Sorting an array using bubble sort algorithm	
 		int[] sortedNumbers = this.sortAlgorithm.sort(numbers);
 		for (int number: sortedNumbers) {
 			System.out.println(number);
