@@ -1,5 +1,8 @@
 package com.abhiroop.spring.springin10steps;
 
+import org.springframework.stereotype.Component;
+
+//@Component
 public class BubbleSort implements SortAlgorithm {
 	public int[] sort(int[] numbers) {
 		//Logic for bubble sort

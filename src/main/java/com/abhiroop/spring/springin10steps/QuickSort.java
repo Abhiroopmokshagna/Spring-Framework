@@ -1,5 +1,8 @@
 package com.abhiroop.spring.springin10steps;
 
+import org.springframework.stereotype.Component;
+
+@Component 
 public class QuickSort implements SortAlgorithm {
 	public int partition(int[] numbers, int low, int high) {
 		int pivot = numbers[high];
