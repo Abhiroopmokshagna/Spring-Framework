@@ -1,4 +1,4 @@
-package com.abhiroop.spring.springin10steps;
+package com.abhiroop.spring.springin10steps.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,6 +11,7 @@ public class BinarySearchImpl {
 	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
 		super();
 		this.sortAlgorithm = sortAlgorithm;
+		System.out.println("Algorithm used: " + this.sortAlgorithm);
 	}
 
 	public Integer binarySearch(int[] numbers, int numberToSearchFor) {

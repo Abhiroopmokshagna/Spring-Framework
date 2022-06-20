@@ -1,8 +1,10 @@
-package com.abhiroop.spring.springin10steps;
+package com.abhiroop.spring.springin10steps.basic;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component 
+@Component
+@Primary
 public class QuickSort implements SortAlgorithm {
 	public int partition(int[] numbers, int low, int high) {
 		int pivot = numbers[high];
