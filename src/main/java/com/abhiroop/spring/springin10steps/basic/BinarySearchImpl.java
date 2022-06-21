@@ -1,10 +1,15 @@
 package com.abhiroop.spring.springin10steps.basic;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
+	
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
@@ -16,14 +21,10 @@ public class BinarySearchImpl {
 
 	public Integer binarySearch(int[] numbers, int numberToSearchFor) {
 		int[] sortedNumbers = this.sortAlgorithm.sort(numbers);
-		for (int number: sortedNumbers) {
-			System.out.println(number);
-		}
 		int low = 0, high = numbers.length - 1;
 		Integer index = null;
 		while (low < high) {
 			int mid = low + (high - low) / 2;
-			System.out.println(mid);
 			if (sortedNumbers[mid] == numberToSearchFor) {
 				index = mid;
 				break;
@@ -34,7 +35,7 @@ public class BinarySearchImpl {
 				high = mid - 1;
 			}
 		}
-		System.out.println(index);
 		return index;
 	}
+	
 }
