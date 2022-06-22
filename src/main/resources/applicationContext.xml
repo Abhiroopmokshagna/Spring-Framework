@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="xmlJdbcConnection" class="com.abhiroop.spring.springin10steps.xml.XMLJdbcConnection">
+    <!-- collaborators and configuration for this bean go here -->
+  </bean>
+
+  <bean id="xmlPersonDao" class="com.abhiroop.spring.springin10steps.xml.XMLPersonDAO">
+    <!-- collaborators and configuration for this bean go here -->
+    <property name = "jdbcConnection" ref = "xmlJdbcConnection" />
+  </bean>
+
+  <!-- more bean definitions go here -->
+
+</beans>
